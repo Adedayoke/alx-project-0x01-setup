@@ -7,7 +7,7 @@ interface UsersProps {
   users: UserProps[]
 }
 
-export default function Users({ users }: UsersProps) {
+function Users({ users }: UsersProps) {
   return (
     <div>
         <Header />
@@ -22,6 +22,8 @@ export default function Users({ users }: UsersProps) {
     </div>
   )
 }
+
+export default Users;
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users")
