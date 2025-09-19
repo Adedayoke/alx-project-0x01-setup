@@ -2,7 +2,7 @@ import Header from '@/components/layout/Header'
 import React, { useState } from 'react'
 import UserCard from '@/components/common/UserCard'
 import UserModal from '@/components/common/UserModal'
-import { UserProps, UserData } from '@/interfaces'
+import { UserProps } from '@/interfaces'
 
 interface UsersProps {
   users: UserProps[]
@@ -14,7 +14,7 @@ function Users({ users }: UsersProps) {
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
 
-  const handleAddUser = (user: UserData) => {
+  const handleAddUser = (user: UserProps) => {
     // For now, just log the new user. In a real app, you'd send to API.
     console.log('New user added:', user);
     // Optionally, add to local state if you want to display immediately
